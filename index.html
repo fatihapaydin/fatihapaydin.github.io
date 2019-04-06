@@ -126,7 +126,7 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Configuration Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
+      Configuratio Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&#34;Logging&#34;: {&#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;,&#34;System&#34;: &#34;Information&#34;,&#34;Microsoft&#34;: &#34;Information&#34;}},&#34;custom&#34;: {&#34;Name&#34;: &#34;Ali&#34;,&#34;Surname&#34;: &#34;Elmas&#34;,&#34;Number&#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.
     </div>
     <div class="read-more">
