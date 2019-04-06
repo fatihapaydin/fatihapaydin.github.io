@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="Fatih APAYDIN" /><meta name="description" content="Preparation Let&amp;rsquo;s define appsettings.Development.json file in our mvc app root directory as
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  { &amp;#34;Logging&amp;#34;: { &amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Debug&amp;#34;, &amp;#34;System&amp;#34;: &amp;#34;Information&amp;#34;, &amp;#34;Microsoft&amp;#34;: &amp;#34;Information&amp;#34; } }, &amp;#34;custom&amp;#34;: { &amp;#34;Name&amp;#34;: &amp;#34;Ali&amp;#34;, &amp;#34;Surname&amp;#34;: &amp;#34;Elmas&amp;#34;, &amp;#34;Number&amp;#34;: 123 } }  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config." /><meta name="keywords" content="Blog, developer, personal" />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&amp;#34;Logging&amp;#34;: {&amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Debug&amp;#34;,&amp;#34;System&amp;#34;: &amp;#34;Information&amp;#34;,&amp;#34;Microsoft&amp;#34;: &amp;#34;Information&amp;#34;}},&amp;#34;custom&amp;#34;: {&amp;#34;Name&amp;#34;: &amp;#34;Ali&amp;#34;,&amp;#34;Surname&amp;#34;: &amp;#34;Elmas&amp;#34;,&amp;#34;Number&amp;#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config." /><meta name="keywords" content="Blog, developer, personal" />
 
 
 
@@ -41,7 +41,7 @@
 
 <meta property="og:title" content="Asp.Net Core Configuration" />
 <meta property="og:description" content="Preparation Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  { &#34;Logging&#34;: { &#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;, &#34;System&#34;: &#34;Information&#34;, &#34;Microsoft&#34;: &#34;Information&#34; } }, &#34;custom&#34;: { &#34;Name&#34;: &#34;Ali&#34;, &#34;Surname&#34;: &#34;Elmas&#34;, &#34;Number&#34;: 123 } }  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config." />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&#34;Logging&#34;: {&#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;,&#34;System&#34;: &#34;Information&#34;,&#34;Microsoft&#34;: &#34;Information&#34;}},&#34;custom&#34;: {&#34;Name&#34;: &#34;Ali&#34;,&#34;Surname&#34;: &#34;Elmas&#34;,&#34;Number&#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fatihapaydin.github.io/post/asp-net-core-configuration/" />
 <meta property="article:published_time" content="2019-04-05T01:57:01&#43;03:00"/>
@@ -49,20 +49,20 @@
 
 <meta itemprop="name" content="Asp.Net Core Configuration">
 <meta itemprop="description" content="Preparation Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  { &#34;Logging&#34;: { &#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;, &#34;System&#34;: &#34;Information&#34;, &#34;Microsoft&#34;: &#34;Information&#34; } }, &#34;custom&#34;: { &#34;Name&#34;: &#34;Ali&#34;, &#34;Surname&#34;: &#34;Elmas&#34;, &#34;Number&#34;: 123 } }  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&#34;Logging&#34;: {&#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;,&#34;System&#34;: &#34;Information&#34;,&#34;Microsoft&#34;: &#34;Information&#34;}},&#34;custom&#34;: {&#34;Name&#34;: &#34;Ali&#34;,&#34;Surname&#34;: &#34;Elmas&#34;,&#34;Number&#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.">
 
 
 <meta itemprop="datePublished" content="2019-04-05T01:57:01&#43;03:00" />
 <meta itemprop="dateModified" content="2019-04-05T01:57:01&#43;03:00" />
-<meta itemprop="wordCount" content="659">
+<meta itemprop="wordCount" content="665">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="Asp.Net Core,Configuration," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Asp.Net Core Configuration"/>
 <meta name="twitter:description" content="Preparation Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  { &#34;Logging&#34;: { &#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;, &#34;System&#34;: &#34;Information&#34;, &#34;Microsoft&#34;: &#34;Information&#34; } }, &#34;custom&#34;: { &#34;Name&#34;: &#34;Ali&#34;, &#34;Surname&#34;: &#34;Elmas&#34;, &#34;Number&#34;: 123 } }  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config."/>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&#34;Logging&#34;: {&#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;,&#34;System&#34;: &#34;Information&#34;,&#34;Microsoft&#34;: &#34;Information&#34;}},&#34;custom&#34;: {&#34;Name&#34;: &#34;Ali&#34;,&#34;Surname&#34;: &#34;Elmas&#34;,&#34;Number&#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -93,8 +93,6 @@
         <li class="mobile-menu-item">Archives</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
       </a><a href="/about/">
         <li class="mobile-menu-item">About</li>
       </a>
@@ -115,8 +113,6 @@
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/">Tags</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
         <a class="menu-item-link" href="/about/">About</a>
       </li>
   </ul>
@@ -134,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 05-04-2019 </span>
         
-          <span class="more-meta"> 659 words </span>
+          <span class="more-meta"> 665 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -159,12 +155,13 @@
 <h2 id="preparation">Preparation</h2>
 
 <p>Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as</p>
+
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-json appsettings.Development.json" data-lang="json appsettings.Development.json"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
+</span><span class="hl"><span class="lnt"> 2
+</span></span><span class="hl"><span class="lnt"> 3
+</span></span><span class="lnt"> 4
 </span><span class="lnt"> 5
 </span><span class="lnt"> 6
 </span><span class="lnt"> 7
@@ -177,10 +174,10 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json appsettings.Development.json" data-lang="json appsettings.Development.json"><span class="p">{</span>
-    <span class="nt">&#34;Logging&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;Default&#34;</span><span class="p">:</span> <span class="s2">&#34;Debug&#34;</span><span class="p">,</span>
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<span class="hl">    <span class="nt">&#34;Logging&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span><span class="hl">    <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span>      <span class="nt">&#34;Default&#34;</span><span class="p">:</span> <span class="s2">&#34;Debug&#34;</span><span class="p">,</span>
       <span class="nt">&#34;System&#34;</span><span class="p">:</span> <span class="s2">&#34;Information&#34;</span><span class="p">,</span>
       <span class="nt">&#34;Microsoft&#34;</span><span class="p">:</span> <span class="s2">&#34;Information&#34;</span>
     <span class="p">}</span>
@@ -192,7 +189,8 @@
   <span class="p">}</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-cs" data-lang="cs"><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -251,7 +249,7 @@
 <p>output. How to take &ldquo;custom&rdquo; object part directly from json file? Let&rsquo;s define a sample model.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-cs ConfigModel.cs" data-lang="cs ConfigModel.cs"><span class="lnt"> 1
+<pre class="chroma"><code class="language-cs" data-lang="cs"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -264,7 +262,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cs ConfigModel.cs" data-lang="cs ConfigModel.cs"><span class="k">namespace</span> <span class="nn">App.Models</span>
+<pre class="chroma"><code class="language-cs" data-lang="cs"><span class="k">namespace</span> <span class="nn">App.Models</span>
 <span class="p">{</span>
     <span class="k">public</span> <span class="k">class</span> <span class="nc">ConfigModel</span>
     <span class="p">{</span>
@@ -333,7 +331,12 @@
 <pre class="chroma"><code class="language-bash" data-lang="bash">Ali <span class="p">|</span> Elmas <span class="p">|</span> <span class="m">123</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>output. We can override appsettings.json file settings by changing appsettings.(Development | Production).json file settings. We can also access configuration value from mvc view by injecting IConfiguration.</p>
+<p>output.
+<div class="admonition tip"><p class="admonition-title">Tip</p>
+  <p>We can override appsettings.json file settings by changing appsettings.(Development | Production).json file settings.</p>
+
+</div>
+We can also access configuration value from mvc view by injecting IConfiguration.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-cs" data-lang="cs"><span class="lnt">1
@@ -396,7 +399,7 @@
 <p>How can we bind all configuration data from app start? Let&rsquo;s add new configuration options and define new options model:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-json appsettings.Development.json" data-lang="json appsettings.Development.json"><span class="lnt"> 1
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -413,9 +416,11 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json appsettings.Development.json" data-lang="json appsettings.Development.json"><span class="p">{</span>
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="err">//appsettings.Development.json</span>
+<span class="p">{</span>
   <span class="nt">&#34;Logging&#34;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&#34;LogLevel&#34;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&#34;Default&#34;</span><span class="p">:</span> <span class="s2">&#34;Debug&#34;</span><span class="p">,</span>
@@ -488,9 +493,11 @@
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cs" data-lang="cs"><span class="k">using</span> <span class="nn">App.Models</span><span class="p">;</span>
+<pre class="chroma"><code class="language-cs" data-lang="cs"><span class="c1">//Startup.cs
+</span><span class="c1"></span><span class="k">using</span> <span class="nn">App.Models</span><span class="p">;</span>
 <span class="p">...</span>
 <span class="k">public</span> <span class="n">IServiceProvider</span> <span class="n">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
 <span class="p">{</span>
@@ -502,7 +509,7 @@
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Our options binding successful or not ? Let&rsquo;s test the code:</p>
+<p>Our options binding successful or not ? Let&rsquo;s test the assignment:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-cs" data-lang="cs"><span class="lnt"> 1
@@ -628,7 +635,10 @@
 <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span></code></pre></td></tr></table>
 </div>
 </div>
-<p>if we change any option of appsetting.Development.json file and saving file then immediately our OptionsModel value also changes.</p>
+<div class="admonition tip"><p class="admonition-title">Tip</p>
+  <p>if we change any option of appsetting.Development.json file and saving file then immediately our OptionsModel value also changes.</p>
+
+</div>
 
     </div>
 
@@ -648,13 +658,12 @@
   
 </div>
 <footer class="post-footer">
-      
+      <div class="post-tags">
+          <a href="/tags/asp.net-core/">Asp.Net Core</a>
+          <a href="/tags/configuration/">Configuration</a>
+          </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/even-preview/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Theme preview</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
+        
         <a class="next" href="/post/importantcommandslist/">
             <span class="next-text nav-default">Important Commands List</span>
             <span class="next-text nav-mobile">Next</span>
@@ -671,9 +680,7 @@
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="https://github.com/fatihapaydin" class="iconfont icon-github" title="github"></a>
   <a href="https://fatihapaydin.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 

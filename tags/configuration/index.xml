@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Even - A super concise theme for Hugo</title>
-    <link>https://fatihapaydin.github.io/post/</link>
-    <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
+    <title>Configuration on Even - A super concise theme for Hugo</title>
+    <link>https://fatihapaydin.github.io/tags/configuration/</link>
+    <description>Recent content in Configuration on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 05 Apr 2019 01:57:01 +0300</lastBuildDate>
     
-	<atom:link href="https://fatihapaydin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fatihapaydin.github.io/tags/configuration/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>https://fatihapaydin.github.io/post/asp-net-core-configuration/</guid>
       <description>Preparation Let&amp;rsquo;s define appsettings.Development.json file in our mvc app root directory as
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&amp;#34;Logging&amp;#34;: {&amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Debug&amp;#34;,&amp;#34;System&amp;#34;: &amp;#34;Information&amp;#34;,&amp;#34;Microsoft&amp;#34;: &amp;#34;Information&amp;#34;}},&amp;#34;custom&amp;#34;: {&amp;#34;Name&amp;#34;: &amp;#34;Ali&amp;#34;,&amp;#34;Surname&amp;#34;: &amp;#34;Elmas&amp;#34;,&amp;#34;Number&amp;#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.</description>
-    </item>
-    
-    <item>
-      <title>Important Commands List</title>
-      <link>https://fatihapaydin.github.io/post/importantcommandslist/</link>
-      <pubDate>Fri, 05 Apr 2019 01:57:01 +0300</pubDate>
-      
-      <guid>https://fatihapaydin.github.io/post/importantcommandslist/</guid>
-      <description>.Net Core 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  #Adding project to solution dotnet sln add App/App.csproj #Removing a project from solution dotnet sln remove App/App.csproj #Create .net core classlib dotnet new classlib -o Domain -f netcoreapp2.2 #Adding migrations dotnet ef migrations add Student_Table_Added #Apply migrations to database dotnet ef database update #Deleting database dotnet ef database drop   GitHub 1 2 3 4 5 6 7 8 9 10 11 12 13  #Initial settings for git integration git config --global user.</description>
     </item>
     
   </channel>
