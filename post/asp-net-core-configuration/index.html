@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Fatih APAYDIN" /><meta name="description" content="Configuratio Let&amp;rsquo;s define appsettings.Development.json file in our mvc app root directory as
+<meta name="author" content="Fatih APAYDIN" /><meta name="description" content="Configuration Let&amp;rsquo;s define appsettings.Development.json file in our mvc app root directory as
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&amp;#34;Logging&amp;#34;: {&amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Debug&amp;#34;,&amp;#34;System&amp;#34;: &amp;#34;Information&amp;#34;,&amp;#34;Microsoft&amp;#34;: &amp;#34;Information&amp;#34;}},&amp;#34;custom&amp;#34;: {&amp;#34;Name&amp;#34;: &amp;#34;Ali&amp;#34;,&amp;#34;Surname&amp;#34;: &amp;#34;Elmas&amp;#34;,&amp;#34;Number&amp;#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config." /><meta name="keywords" content="Blog, developer, personal" />
 
 
@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Asp.Net Core Configuration" />
-<meta property="og:description" content="Configuratio Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
+<meta property="og:description" content="Configuration Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&#34;Logging&#34;: {&#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;,&#34;System&#34;: &#34;Information&#34;,&#34;Microsoft&#34;: &#34;Information&#34;}},&#34;custom&#34;: {&#34;Name&#34;: &#34;Ali&#34;,&#34;Surname&#34;: &#34;Elmas&#34;,&#34;Number&#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fatihapaydin.github.io/post/asp-net-core-configuration/" />
@@ -48,7 +48,7 @@
 <meta property="article:modified_time" content="2019-04-05T01:57:01&#43;03:00"/>
 
 <meta itemprop="name" content="Asp.Net Core Configuration">
-<meta itemprop="description" content="Configuratio Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
+<meta itemprop="description" content="Configuration Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&#34;Logging&#34;: {&#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;,&#34;System&#34;: &#34;Information&#34;,&#34;Microsoft&#34;: &#34;Information&#34;}},&#34;custom&#34;: {&#34;Name&#34;: &#34;Ali&#34;,&#34;Surname&#34;: &#34;Elmas&#34;,&#34;Number&#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.">
 
 
@@ -61,7 +61,7 @@
 <meta itemprop="keywords" content="Asp.Net Core,Configuration," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Asp.Net Core Configuration"/>
-<meta name="twitter:description" content="Configuratio Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
+<meta name="twitter:description" content="Configuration Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&#34;Logging&#34;: {&#34;LogLevel&#34;: { &#34;Default&#34;: &#34;Debug&#34;,&#34;System&#34;: &#34;Information&#34;,&#34;Microsoft&#34;: &#34;Information&#34;}},&#34;custom&#34;: {&#34;Name&#34;: &#34;Ali&#34;,&#34;Surname&#34;: &#34;Elmas&#34;,&#34;Number&#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config."/>
 
 <!--[if lte IE 9]>
@@ -143,7 +143,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#configuratio">Configuratio</a></li>
+<li><a href="#configuration">Configuration</a></li>
 <li><a href="#using-model-for-storing-configuration">Using Model For Storing Configuration</a></li>
 <li><a href="#inject-configuration-to-mvc-view">Inject Configuration To Mvc View</a></li>
 <li><a href="#binding-configuration-data-from-app-start">Binding Configuration Data From App Start</a></li>
@@ -155,7 +155,7 @@
     <div class="post-content">
       
 
-<h2 id="configuratio">Configuratio</h2>
+<h2 id="configuration">Configuration</h2>
 
 <p>Let&rsquo;s define appsettings.Development.json file in our mvc app root directory as</p>
 

@@ -17,7 +17,7 @@
       <pubDate>Fri, 05 Apr 2019 01:57:01 +0300</pubDate>
       
       <guid>https://fatihapaydin.github.io/post/asp-net-core-configuration/</guid>
-      <description>Configuratio Let&amp;rsquo;s define appsettings.Development.json file in our mvc app root directory as
+      <description>Configuration Let&amp;rsquo;s define appsettings.Development.json file in our mvc app root directory as
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&amp;#34;Logging&amp;#34;: {&amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Debug&amp;#34;,&amp;#34;System&amp;#34;: &amp;#34;Information&amp;#34;,&amp;#34;Microsoft&amp;#34;: &amp;#34;Information&amp;#34;}},&amp;#34;custom&amp;#34;: {&amp;#34;Name&amp;#34;: &amp;#34;Ali&amp;#34;,&amp;#34;Surname&amp;#34;: &amp;#34;Elmas&amp;#34;,&amp;#34;Number&amp;#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.</description>
     </item>
     
