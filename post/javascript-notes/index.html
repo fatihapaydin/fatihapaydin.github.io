@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>JavaScript Notes 1 - Even - A super concise theme for Hugo</title>
+  <title>JavaScript Notes Episode 1 - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="JavaScript Notes 1" />
+<meta property="og:title" content="JavaScript Notes Episode 1" />
 <meta property="og:description" content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying." />
 <meta property="og:type" content="article" />
@@ -48,20 +48,20 @@
 <meta property="article:published_time" content="2019-05-01T03:30:11&#43;03:00"/>
 <meta property="article:modified_time" content="2019-05-01T03:30:11&#43;03:00"/>
 
-<meta itemprop="name" content="JavaScript Notes 1">
+<meta itemprop="name" content="JavaScript Notes Episode 1">
 <meta itemprop="description" content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying.">
 
 
 <meta itemprop="datePublished" content="2019-05-01T03:30:11&#43;03:00" />
 <meta itemprop="dateModified" content="2019-05-01T03:30:11&#43;03:00" />
-<meta itemprop="wordCount" content="667">
+<meta itemprop="wordCount" content="848">
 
 
 
 <meta itemprop="keywords" content="javascript,es6," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="JavaScript Notes 1"/>
+<meta name="twitter:title" content="JavaScript Notes Episode 1"/>
 <meta name="twitter:description" content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying."/>
 
@@ -123,12 +123,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">JavaScript Notes 1</h1>
+      <h1 class="post-title">JavaScript Notes Episode 1</h1>
 
       <div class="post-meta">
         <span class="post-time"> 01-05-2019 </span>
         
-          <span class="more-meta"> 667 words </span>
+          <span class="more-meta"> 848 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -146,6 +146,7 @@
 <li><a href="#constants">Constants</a></li>
 <li><a href="#string-operations">String Operations</a></li>
 <li><a href="#arrays">Arrays</a></li>
+<li><a href="#switch-case">Switch-Case</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -530,6 +531,153 @@
     <span class="p">});</span>
 
     <span class="nx">id</span><span class="p">(</span><span class="s2">&#34;total&#34;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;Total : $&#34;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="switch-case">Switch-Case</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Building Blocks<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>    
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;weather&#34;</span><span class="p">&gt;</span>Select the weather type today: <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;weather&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;-1&#34;</span><span class="p">&gt;</span>--Make a choice--<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;1&#34;</span><span class="p">&gt;</span>Sunny<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;2&#34;</span><span class="p">&gt;</span>Rainy<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;</span>Snowing<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;par&#34;</span><span class="p">&gt;</span>No choice<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./scripts/block.js&#34;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//block.js
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">id</span><span class="p">(</span><span class="nx">idValue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">idValue</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">weather</span> <span class="o">=</span> <span class="nx">id</span><span class="p">(</span><span class="s2">&#34;weather&#34;</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">para</span> <span class="o">=</span> <span class="nx">id</span><span class="p">(</span><span class="s2">&#34;par&#34;</span><span class="p">);</span>
+
+    <span class="nx">weather</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;change&#34;</span><span class="p">,</span> <span class="nx">chooseWeather</span><span class="p">);</span>
+
+    <span class="kd">function</span> <span class="nx">chooseWeather</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">choice</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">weather</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+
+        <span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+
+        <span class="k">switch</span> <span class="p">(</span><span class="nx">choice</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="nx">result</span> <span class="o">=</span> <span class="s2">&#34;Sunny selected&#34;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="nx">result</span> <span class="o">=</span> <span class="s2">&#34;Rainy selected&#34;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+                <span class="nx">result</span> <span class="o">=</span> <span class="s2">&#34;Snowing selected&#34;</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">default</span><span class="o">:</span>
+                <span class="nx">result</span> <span class="o">=</span> <span class="s2">&#34;No choice&#34;</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nx">para</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
