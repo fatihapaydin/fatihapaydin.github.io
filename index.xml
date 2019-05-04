@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>JavaScript Notes Episode 1</title>
+      <title>MDN JavaScript Notes Episode 1</title>
       <link>https://fatihapaydin.github.io/post/javascript-notes/</link>
       <pubDate>Wed, 01 May 2019 03:30:11 +0300</pubDate>
       
       <guid>https://fatihapaydin.github.io/post/javascript-notes/</guid>
-      <description>Async and Defer keyword We can call external javascript by
+      <description>1. Async and Defer keyword We can call external javascript by
 1  &amp;lt;script src=&amp;#34;operation.js&amp;#34; async&amp;gt;&amp;lt;/script&amp;gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying.</description>
     </item>
     
