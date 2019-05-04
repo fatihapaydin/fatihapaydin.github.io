@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Fatih APAYDIN" /><meta name="description" content="1. Async and Defer keyword We can call external javascript by
+<meta name="author" content="Fatih APAYDIN" /><meta name="description" content="Async and Defer keyword We can call external javascript by
 1  &amp;lt;script src=&amp;#34;operation.js&amp;#34; async&amp;gt;&amp;lt;/script&amp;gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying." /><meta name="keywords" content="Blog, developer, personal" />
 
 
@@ -41,7 +41,7 @@
 
 
 <meta property="og:title" content="MDN JavaScript Notes Episode 1" />
-<meta property="og:description" content="1. Async and Defer keyword We can call external javascript by
+<meta property="og:description" content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fatihapaydin.github.io/post/javascript-notes/" />
@@ -49,20 +49,20 @@
 <meta property="article:modified_time" content="2019-05-01T03:30:11&#43;03:00"/>
 
 <meta itemprop="name" content="MDN JavaScript Notes Episode 1">
-<meta itemprop="description" content="1. Async and Defer keyword We can call external javascript by
+<meta itemprop="description" content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying.">
 
 
 <meta itemprop="datePublished" content="2019-05-01T03:30:11&#43;03:00" />
 <meta itemprop="dateModified" content="2019-05-01T03:30:11&#43;03:00" />
-<meta itemprop="wordCount" content="1352">
+<meta itemprop="wordCount" content="1337">
 
 
 
 <meta itemprop="keywords" content="mdn,javascript,es6," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MDN JavaScript Notes Episode 1"/>
-<meta name="twitter:description" content="1. Async and Defer keyword We can call external javascript by
+<meta name="twitter:description" content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying."/>
 
 <!--[if lte IE 9]>
@@ -128,7 +128,7 @@
       <div class="post-meta">
         <span class="post-time"> 01-05-2019 </span>
         
-          <span class="more-meta"> 1352 words </span>
+          <span class="more-meta"> 1337 words </span>
           <span class="more-meta"> 7 mins read </span>
         
       </div>
@@ -141,24 +141,24 @@
 <ul>
 <li>
 <ul>
-<li><a href="#1-async-and-defer-keyword">1. Async and Defer keyword</a></li>
-<li><a href="#2-comments">2. Comments</a></li>
-<li><a href="#3-constants">3. Constants</a></li>
-<li><a href="#4-string-operations">4. String Operations</a></li>
-<li><a href="#5-arrays">5. Arrays</a>
+<li><a href="#async-and-defer-keyword">Async and Defer keyword</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#string-operations">String Operations</a></li>
+<li><a href="#arrays">Arrays</a>
 <ul>
-<li><a href="#5-1-string-split-function">5.1 String split function</a></li>
-<li><a href="#5-2-push-method">5.2 Push method</a></li>
-<li><a href="#5-3-pop-method">5.3 Pop method</a></li>
-<li><a href="#5-4-unshift-and-shift-methods">5.4 Unshift and shift methods</a></li>
-<li><a href="#5-5-an-array-example">5.5 An array example</a></li>
+<li><a href="#string-split-function">String split function</a></li>
+<li><a href="#push-method">Push method</a></li>
+<li><a href="#pop-method">Pop method</a></li>
+<li><a href="#unshift-and-shift-methods">Unshift and shift methods</a></li>
+<li><a href="#an-array-example">An array example</a></li>
 </ul></li>
-<li><a href="#6-switch-case">6. Switch-Case</a></li>
-<li><a href="#7-events">7. Events</a>
+<li><a href="#switch-case">Switch-Case</a></li>
+<li><a href="#events">Events</a>
 <ul>
-<li><a href="#7-1-addeventlistener-and-removeeventlistener-methods">7.1 AddEventListener and RemoveEventListener methods</a></li>
-<li><a href="#7-2-using-event-object">7.2 Using Event Object</a></li>
-<li><a href="#7-3-basic-form-submit">7.3 Basic Form Submit</a></li>
+<li><a href="#addeventlistener-and-removeeventlistener-methods">AddEventListener and RemoveEventListener methods</a></li>
+<li><a href="#using-event-object">Using Event Object</a></li>
+<li><a href="#basic-form-submit">Basic Form Submit</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -168,7 +168,7 @@
     <div class="post-content">
       
 
-<h2 id="1-async-and-defer-keyword">1. Async and Defer keyword</h2>
+<h2 id="async-and-defer-keyword">Async and Defer keyword</h2>
 
 <p>We can call external javascript by</p>
 <div class="highlight"><div class="chroma">
@@ -218,7 +218,7 @@
 </div>
 <p>All the scripts with the defer attribute will load in the order they appear on the page. So in the above example, we can be sure that jquery.js will load before script2.js and script3.js and that script2.js will load before script3.js.</p>
 
-<h2 id="2-comments">2. Comments</h2>
+<h2 id="comments">Comments</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
@@ -242,7 +242,7 @@
 </code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="3-constants">3. Constants</h2>
+<h2 id="constants">Constants</h2>
 
 <p>Setting constans second time cannot be permit.</p>
 <div class="highlight"><div class="chroma">
@@ -266,7 +266,7 @@
 </div>
 <p><img src="/images/settingConstantError.png" alt="Screenshot" /></p>
 
-<h2 id="4-string-operations">4. String Operations</h2>
+<h2 id="string-operations">String Operations</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
@@ -304,7 +304,7 @@
 </code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="5-arrays">5. Arrays</h2>
+<h2 id="arrays">Arrays</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
@@ -340,7 +340,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="5-1-string-split-function">5.1 String split function</h3>
+<h3 id="string-split-function">String split function</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
@@ -360,7 +360,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="5-2-push-method">5.2 Push method</h3>
+<h3 id="push-method">Push method</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
@@ -386,7 +386,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="5-3-pop-method">5.3 Pop method</h3>
+<h3 id="pop-method">Pop method</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
@@ -410,7 +410,7 @@
 </div>
 <p>unshift() and shift() work in exactly the same way as push() and pop(), respectively, except that they work on the beginning of the array, not the end.</p>
 
-<h3 id="5-4-unshift-and-shift-methods">5.4 Unshift and shift methods</h3>
+<h3 id="unshift-and-shift-methods">Unshift and shift methods</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
@@ -436,7 +436,7 @@
 </span></code></pre></td></tr></table>
 </div>
 </div>
-<h3 id="5-5-an-array-example">5.5 An array example</h3>
+<h3 id="an-array-example">An array example</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
@@ -569,7 +569,7 @@
 </code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="6-switch-case">6. Switch-Case</h2>
+<h2 id="switch-case">Switch-Case</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
@@ -716,9 +716,9 @@
 </code></pre></td></tr></table>
 </div>
 </div>
-<h2 id="7-events">7. Events</h2>
+<h2 id="events">Events</h2>
 
-<h3 id="7-1-addeventlistener-and-removeeventlistener-methods">7.1 AddEventListener and RemoveEventListener methods</h3>
+<h3 id="addeventlistener-and-removeeventlistener-methods">AddEventListener and RemoveEventListener methods</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
@@ -827,7 +827,7 @@
 </div>
 <p>After clicking btnRemove, btnShow click event only executes log2 function.</p>
 
-<h3 id="7-2-using-event-object">7.2 Using Event Object</h3>
+<h3 id="using-event-object">Using Event Object</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
@@ -932,7 +932,7 @@
 </div>
 <p>event.target object in bgChange method refers btnShow button element. We can observe the content of event in browser console tab.</p>
 
-<h3 id="7-3-basic-form-submit">7.3 Basic Form Submit</h3>
+<h3 id="basic-form-submit">Basic Form Submit</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
