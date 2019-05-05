@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MDN JavaScript Notes Episode 2: Object Oriented JS - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Fatih APAYDIN" /><meta name="description" content="Define an Object Let&amp;rsquo;s define an object.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  function log(num) { console.log(num); } function id(idValue) { return document.getElementById(idValue); } window.onload = function () { let person = { name: { first: &amp;#34;Bob&amp;#34;, last: &amp;#34;Smith&amp;#34; }, age: 32, gender: &amp;#34;male&amp;#34;, interests: [&amp;#34;music&amp;#34;, &amp;#34;skiing&amp;#34;], bio: function () { log(this." /><meta name="keywords" content="Blog, developer, personal" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://fatihapaydin.github.io/post/javascript-notes-oop/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.7d7cabec.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="MDN JavaScript Notes Episode 2: Object Oriented JS" />
+<meta property="og:description" content="Define an Object Let&rsquo;s define an object.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  function log(num) { console.log(num); } function id(idValue) { return document.getElementById(idValue); } window.onload = function () { let person = { name: { first: &#34;Bob&#34;, last: &#34;Smith&#34; }, age: 32, gender: &#34;male&#34;, interests: [&#34;music&#34;, &#34;skiing&#34;], bio: function () { log(this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatihapaydin.github.io/post/javascript-notes-oop/" />
+<meta property="article:published_time" content="2019-05-05T00:15:41&#43;03:00"/>
+<meta property="article:modified_time" content="2019-05-05T00:15:41&#43;03:00"/>
+
+<meta itemprop="name" content="MDN JavaScript Notes Episode 2: Object Oriented JS">
+<meta itemprop="description" content="Define an Object Let&rsquo;s define an object.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  function log(num) { console.log(num); } function id(idValue) { return document.getElementById(idValue); } window.onload = function () { let person = { name: { first: &#34;Bob&#34;, last: &#34;Smith&#34; }, age: 32, gender: &#34;male&#34;, interests: [&#34;music&#34;, &#34;skiing&#34;], bio: function () { log(this.">
+
+
+<meta itemprop="datePublished" content="2019-05-05T00:15:41&#43;03:00" />
+<meta itemprop="dateModified" content="2019-05-05T00:15:41&#43;03:00" />
+<meta itemprop="wordCount" content="918">
+
+
+
+<meta itemprop="keywords" content="mdn,javascript,es6," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MDN JavaScript Notes Episode 2: Object Oriented JS"/>
+<meta name="twitter:description" content="Define an Object Let&rsquo;s define an object.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  function log(num) { console.log(num); } function id(idValue) { return document.getElementById(idValue); } window.onload = function () { let person = { name: { first: &#34;Bob&#34;, last: &#34;Smith&#34; }, age: 32, gender: &#34;male&#34;, interests: [&#34;music&#34;, &#34;skiing&#34;], bio: function () { log(this."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Enjoy Programming</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+      <div class="logo-wrapper">
+  <a href="/" class="logo">Enjoy Programming</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MDN JavaScript Notes Episode 2: Object Oriented JS</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 05-05-2019 </span>
+        
+          <span class="more-meta"> 918 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#define-an-object">Define an Object</a></li>
+<li><a href="#define-es6-class">Define ES6 Class</a></li>
+<li><a href="#class-inheritance">Class Inheritance</a></li>
+<li><a href="#json">JSON</a></li>
+<li><a href="#get-json-data-from-remote-source">Get Json Data From Remote Source</a></li>
+<li><a href="#json-parse-and-json-stringify-methods">JSON.parse and JSON.stringify methods</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="define-an-object">Define an Object</h2>
+
+<p>Let&rsquo;s define an object.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">id</span><span class="p">(</span><span class="nx">idValue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">idValue</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+     <span class="kd">let</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">first</span><span class="o">:</span> <span class="s2">&#34;Bob&#34;</span><span class="p">,</span>
+            <span class="nx">last</span><span class="o">:</span> <span class="s2">&#34;Smith&#34;</span>
+        <span class="p">},</span>
+        <span class="nx">age</span><span class="o">:</span> <span class="mi">32</span><span class="p">,</span>
+        <span class="nx">gender</span><span class="o">:</span> <span class="s2">&#34;male&#34;</span><span class="p">,</span>
+        <span class="nx">interests</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;music&#34;</span><span class="p">,</span> <span class="s2">&#34;skiing&#34;</span><span class="p">],</span>
+        <span class="nx">bio</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">first</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">last</span> <span class="o">+</span> <span class="s1">&#39; is &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">+</span> <span class="s1">&#39; years old. He likes &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">interests</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; and &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">interests</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="nx">greeting</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hi! I\&#39;m &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">first</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="nx">person</span><span class="p">.</span><span class="nx">bio</span><span class="p">();</span>
+
+    <span class="nx">person</span><span class="p">.</span><span class="nx">greeting</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="define-es6-class">Define ES6 Class</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">id</span><span class="p">(</span><span class="nx">idValue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">idValue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nx">Person</span> <span class="p">{</span>
+
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">greeting</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hi! I\&#39;m &#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">);</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">per</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;Ali&#34;</span><span class="p">);</span>
+
+    <span class="nx">per</span><span class="p">.</span><span class="nx">greeting</span><span class="p">();</span><span class="c1">// Hi! I&#39;m Ali.
+</span><span class="c1"></span>        
+    <span class="nx">log</span><span class="p">(</span><span class="nx">per</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span><span class="c1">// Ali
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Access to name field from class instance is possible because name field has public access. Let&rsquo;s advance our person class a bit.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">id</span><span class="p">(</span><span class="nx">idValue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">idValue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">interests</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="nx">first</span><span class="p">,</span>
+            <span class="nx">last</span>
+        <span class="p">};</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="nx">gender</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">interests</span> <span class="o">=</span> <span class="nx">interests</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">greeting</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">(</span><span class="sb">`Hi! I&#39;m </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">first</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="nx">farewell</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">first</span><span class="si">}</span><span class="sb"> has left the building. Bye for now!`</span><span class="p">);</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">per</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">&#34;Ali&#34;</span><span class="p">,</span> <span class="s2">&#34;Can&#34;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;male&#34;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&#34;books&#34;</span><span class="p">,</span> <span class="s2">&#34;chess&#34;</span><span class="p">]);</span>
+
+    <span class="nx">per</span><span class="p">.</span><span class="nx">greeting</span><span class="p">();</span><span class="c1">// Hi! I&#39;m Ali
+</span><span class="c1"></span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">per</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// {first: &#34;Ali&#34;, last: &#34;Can&#34;}
+</span><span class="c1"></span>
+    <span class="nx">log</span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">getPrototypeOf</span><span class="p">(</span><span class="nx">per</span><span class="p">));</span><span class="c1">// {constructor: ƒ, greeting: ƒ, farewell: ƒ}
+</span><span class="c1"></span>
+    <span class="c1">// Lists all field values of person instance per 
+</span><span class="c1"></span>    <span class="nx">log</span><span class="p">(</span><span class="nx">per</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="class-inheritance">Class Inheritance</h2>
+
+<p>Let&rsquo;s extend Teacher class from Person class. Teacher has two distinct fields: subject and grade.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">id</span><span class="p">(</span><span class="nx">idValue</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">idValue</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">interests</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="nx">first</span><span class="p">,</span>
+            <span class="nx">last</span>
+        <span class="p">};</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">gender</span> <span class="o">=</span> <span class="nx">gender</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">interests</span> <span class="o">=</span> <span class="nx">interests</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">greeting</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">(</span><span class="sb">`Hi! I&#39;m </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">first</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="nx">farewell</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">first</span><span class="si">}</span><span class="sb"> has left the building. Bye for now!`</span><span class="p">);</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nx">Teacher</span> <span class="k">extends</span> <span class="nx">Person</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">interests</span><span class="p">,</span> <span class="nx">subject</span><span class="p">,</span> <span class="nx">grade</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">gender</span><span class="p">,</span> <span class="nx">interests</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">subject</span> <span class="o">=</span> <span class="nx">subject</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">grade</span> <span class="o">=</span> <span class="nx">grade</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">greeting</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">(</span><span class="sb">`Hello ! I&#39;m </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">first</span><span class="si">}</span><span class="sb"> and a </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">subject</span><span class="si">}</span><span class="sb"> teacher.`</span><span class="p">);</span>
+    <span class="p">};</span>
+
+    <span class="nx">farewell</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">log</span><span class="p">(</span><span class="sb">`After an enjoyable </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">subject</span><span class="si">}</span><span class="sb"> class, our teacher has left the class !`</span><span class="p">);</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Teacher</span><span class="p">(</span><span class="s2">&#34;Saime&#34;</span><span class="p">,</span> <span class="s2">&#34;Can&#34;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&#34;female&#34;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&#34;Literature&#34;</span><span class="p">],</span> <span class="s2">&#34;Mathematics&#34;</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+
+    <span class="nx">teacher</span><span class="p">.</span><span class="nx">greeting</span><span class="p">();</span>
+
+    <span class="nx">teacher</span><span class="p">.</span><span class="nx">farewell</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<p>Observe that Teacher class methods are executing different from Person despite each method has same name.</p>
+
+<h2 id="json">JSON</h2>
+
+<p>A json example</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;squadName&#34;</span><span class="p">:</span> <span class="s2">&#34;Super hero squad&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;homeTown&#34;</span><span class="p">:</span> <span class="s2">&#34;Metro City&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;formed&#34;</span><span class="p">:</span> <span class="mi">2016</span><span class="p">,</span>
+  <span class="nt">&#34;secretBase&#34;</span><span class="p">:</span> <span class="s2">&#34;Super tower&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;active&#34;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Json resembles js object notation. Some important remarks are :</p>
+
+<ul>
+<li><p>JSON is purely a data format — it contains only properties, no methods.</p></li>
+
+<li><p>JSON requires double quotes to be used around strings and property names. Single quotes are not valid.</p></li>
+
+<li><p>Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work. You should be careful to validate any data you are attempting to use (although computer-generated JSON is less likely to include errors, as long as the generator program is working correctly).</p></li>
+
+<li><p>JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be a valid JSON object.</p></li>
+
+<li><p>Unlike in JavaScript code in which object properties may be unquoted, in JSON, only quoted strings may be used as properties.</p></li>
+</ul>
+
+<h2 id="get-json-data-from-remote-source">Get Json Data From Remote Source</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Building Blocks<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>    
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;css/style.css&#34;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>       
+
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./scripts/index.js&#34;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">populateHeader</span><span class="p">(</span><span class="nx">jsonObj</span><span class="p">,</span> <span class="nx">header</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">myH1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">);</span>
+    <span class="nx">myH1</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">jsonObj</span><span class="p">.</span><span class="nx">squadName</span><span class="p">;</span>
+    <span class="nx">header</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">myH1</span><span class="p">);</span>
+
+    <span class="kd">let</span> <span class="nx">myPara</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+    <span class="nx">myPara</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Hometown: &#39;</span> <span class="o">+</span> <span class="nx">jsonObj</span><span class="p">.</span><span class="nx">homeTown</span> <span class="o">+</span> <span class="s1">&#39;, Formed: &#39;</span> <span class="o">+</span> <span class="nx">jsonObj</span><span class="p">.</span><span class="nx">formed</span><span class="p">;</span>
+    <span class="nx">header</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">myPara</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">header</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;header&#39;</span><span class="p">);</span>
+
+    <span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json&#34;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">populateHeader</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">header</span><span class="p">);</span>
+        <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="json-parse-and-json-stringify-methods">JSON.parse and JSON.stringify methods</h2>
+
+<div class="admonition tip"><p class="admonition-title">Tip</p>
+  <ul>
+<li><p>JSON.stringify(object) returns a json string</p></li>
+
+<li><p>JSON.parse(string) returns a javascript object.</p></li>
+</ul>
+
+</div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">let</span> <span class="nx">jsObj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;Osman&#34;</span><span class="p">,</span> <span class="nx">age</span><span class="o">:</span> <span class="mi">25</span> <span class="p">};</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jsObj1</span><span class="p">));</span> <span class="c1">// {&#34;name&#34;:&#34;Osman&#34;,&#34;age&#34;:25}
+</span><span class="c1"></span>
+
+    <span class="kd">let</span> <span class="nx">jsObj2</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="s1">&#39;{ &#34;employee&#34;: &#34;Ali&#34;, &#34;officeNumber&#34;: 35 }&#39;</span><span class="p">);</span>
+    <span class="nx">log</span><span class="p">(</span><span class="nx">jsObj2</span><span class="p">);</span><span class="c1">// {employee: &#34;Ali&#34;, officeNumber: 35}
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/mdn/">mdn</a>
+          <a href="/tags/javascript/">javascript</a>
+          <a href="/tags/es6/">es6</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/javascript-notes/">
+            <span class="next-text nav-default">MDN JavaScript Notes Episode 1: Basics</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+  (function () {
+    
+    
+    if (window.location.hostname === 'localhost') return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'disqus_7Wvz7hiBkH';
+    dsq.src = 'https://https-fatihapaydin-github-io.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/fatihapaydin" class="iconfont icon-github" title="github"></a>
+  <a href="https://fatihapaydin.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Fatih APAYDIN</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+
+  <script id="dsq-count-scr" src="//https-fatihapaydin-github-io.disqus.com/count.js" async></script>
+
+</body>
+
+</html>
