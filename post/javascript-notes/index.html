@@ -6,70 +6,77 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>MDN JavaScript Notes Episode 1: Basics - Even - A super concise theme for Hugo</title>
   <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
-
-
-<meta name="author" content="Fatih APAYDIN" /><meta name="description" content="Async and Defer keyword We can call external javascript by
-1  &amp;lt;script src=&amp;#34;operation.js&amp;#34; async&amp;gt;&amp;lt;/script&amp;gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying." /><meta name="keywords" content="Blog, developer, personal" />
+  <meta name="theme-color" content="#f8f5ec" />
+  <meta name="msapplication-navbutton-color" content="#f8f5ec">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
+  <meta name="author" content="Fatih APAYDIN" />
+  <meta name="description"
+    content="Async and Defer keyword We can call external javascript by
+1  &amp;lt;script src=&amp;#34;operation.js&amp;#34; async&amp;gt;&amp;lt;/script&amp;gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying." />
+  <meta name="keywords" content="Blog, developer, personal" />
 
 
 
 
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://fatihapaydin.github.io/post/javascript-notes/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
 
 
-<link href="/dist/even.7d7cabec.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+  <link rel="canonical" href="https://fatihapaydin.github.io/post/javascript-notes/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<meta property="og:title" content="MDN JavaScript Notes Episode 1: Basics" />
-<meta property="og:description" content="Async and Defer keyword We can call external javascript by
+  <link href="/dist/even.7d7cabec.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css"
+    integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+  <meta property="og:title" content="MDN JavaScript Notes Episode 1: Basics" />
+  <meta property="og:description"
+    content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fatihapaydin.github.io/post/javascript-notes/" />
-<meta property="article:published_time" content="2019-05-01T03:30:11&#43;03:00"/>
-<meta property="article:modified_time" content="2019-05-01T03:30:11&#43;03:00"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://fatihapaydin.github.io/post/javascript-notes/" />
+  <meta property="article:published_time" content="2019-05-01T03:30:11&#43;03:00" />
+  <meta property="article:modified_time" content="2019-05-01T03:30:11&#43;03:00" />
 
-<meta itemprop="name" content="MDN JavaScript Notes Episode 1: Basics">
-<meta itemprop="description" content="Async and Defer keyword We can call external javascript by
+  <meta itemprop="name" content="MDN JavaScript Notes Episode 1: Basics">
+  <meta itemprop="description"
+    content="Async and Defer keyword We can call external javascript by
 1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying.">
 
 
-<meta itemprop="datePublished" content="2019-05-01T03:30:11&#43;03:00" />
-<meta itemprop="dateModified" content="2019-05-01T03:30:11&#43;03:00" />
-<meta itemprop="wordCount" content="1337">
+  <meta itemprop="datePublished" content="2019-05-01T03:30:11&#43;03:00" />
+  <meta itemprop="dateModified" content="2019-05-01T03:30:11&#43;03:00" />
+  <meta itemprop="wordCount" content="1337">
 
 
 
-<meta itemprop="keywords" content="mdn,javascript,es6," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="MDN JavaScript Notes Episode 1: Basics"/>
-<meta name="twitter:description" content="Async and Defer keyword We can call external javascript by
-1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying."/>
+  <meta itemprop="keywords" content="mdn,javascript,es6," />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MDN JavaScript Notes Episode 1: Basics" />
+  <meta name="twitter:description"
+    content="Async and Defer keyword We can call external javascript by
+1  &lt;script src=&#34;operation.js&#34; async&gt;&lt;/script&gt;    Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying." />
 
-<!--[if lte IE 9]>
+  <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
 <![endif]-->
 
-<!--[if lt IE 9]>
+  <!--[if lt IE 9]>
   <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
 <![endif]-->
@@ -78,150 +85,189 @@
 
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Enjoy Programming</a>
+    <div class="mobile-header-logo">
+      <a href="/" class="logo">Enjoy Programming</a>
+    </div>
+    <div class="mobile-navbar-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
+  <nav id="mobile-menu" class="mobile-menu slideout-menu">
+    <ul class="mobile-menu-list">
+      <a href="/">
         <li class="mobile-menu-item">Home</li>
       </a><a href="/post/">
         <li class="mobile-menu-item">Archives</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">Tags</li>
       </a>
-  </ul>
-</nav>
+    </ul>
+  </nav>
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
       <div class="logo-wrapper">
-  <a href="/" class="logo">Enjoy Programming</a>
-</div>
+        <a href="/" class="logo">Enjoy Programming</a>
+      </div>
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li>
-  </ul>
-</nav>
+      <nav class="site-navbar">
+        <ul id="menu" class="menu">
+          <li class="menu-item">
+            <a class="menu-item-link" href="/">Home</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-item-link" href="/post/">Archives</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-item-link" href="/tags/">Tags</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
           <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">MDN JavaScript Notes Episode 1: Basics</h1>
 
-      <div class="post-meta">
-        <span class="post-time"> 01-05-2019 </span>
-        
-          <span class="more-meta"> 1337 words </span>
-          <span class="more-meta"> 7 mins read </span>
-        
-      </div>
-    </header>
+            <header class="post-header">
+              <h1 class="post-title">MDN JavaScript Notes Episode 1: Basics</h1>
 
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content">
-    <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#async-and-defer-keyword">Async and Defer keyword</a></li>
-<li><a href="#comments">Comments</a></li>
-<li><a href="#constants">Constants</a></li>
-<li><a href="#string-operations">String Operations</a></li>
-<li><a href="#arrays">Arrays</a>
-<ul>
-<li><a href="#string-split-function">String split function</a></li>
-<li><a href="#push-method">Push method</a></li>
-<li><a href="#pop-method">Pop method</a></li>
-<li><a href="#unshift-and-shift-methods">Unshift and shift methods</a></li>
-<li><a href="#an-array-example">An array example</a></li>
-</ul></li>
-<li><a href="#switch-case">Switch-Case</a></li>
-<li><a href="#events">Events</a>
-<ul>
-<li><a href="#addeventlistener-and-removeeventlistener-methods">AddEventListener and RemoveEventListener methods</a></li>
-<li><a href="#using-event-object">Using Event Object</a></li>
-<li><a href="#basic-form-submit">Basic Form Submit</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-  </div>
-</div>
-    <div class="post-content">
-      
+              <div class="post-meta">
+                <span class="post-time"> 01-05-2019 </span>
 
-<h2 id="async-and-defer-keyword">Async and Defer keyword</h2>
+                <span class="more-meta"> 1337 words </span>
+                <span class="more-meta"> 7 mins read </span>
 
-<p>We can call external javascript by</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;operation.js&#34;</span> <span class="kr">async</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying. It is best to use async when the scripts in the page run independently from each other and depend on no other script on the page.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+              </div>
+            </header>
+
+            <div class="post-toc" id="post-toc">
+              <h2 class="post-toc-title">Contents</h2>
+              <div class="post-toc-content">
+                <nav id="TableOfContents">
+                  <ul>
+                    <li>
+                      <ul>
+                        <li><a href="#async-and-defer-keyword">Async and Defer keyword</a></li>
+                        <li><a href="#comments">Comments</a></li>
+                        <li><a href="#constants">Constants</a></li>
+                        <li><a href="#string-operations">String Operations</a></li>
+                        <li><a href="#arrays">Arrays</a>
+                          <ul>
+                            <li><a href="#string-split-function">String split function</a></li>
+                            <li><a href="#push-method">Push method</a></li>
+                            <li><a href="#pop-method">Pop method</a></li>
+                            <li><a href="#unshift-and-shift-methods">Unshift and shift methods</a></li>
+                            <li><a href="#an-array-example">An array example</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#switch-case">Switch-Case</a></li>
+                        <li><a href="#events">Events</a>
+                          <ul>
+                            <li><a href="#addeventlistener-and-removeeventlistener-methods">AddEventListener and
+                                RemoveEventListener methods</a></li>
+                            <li><a href="#using-event-object">Using Event Object</a></li>
+                            <li><a href="#basic-form-submit">Basic Form Submit</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="post-content">
+
+
+              <h2 id="async-and-defer-keyword">Async and Defer keyword</h2>
+
+              <p>We can call external javascript by</p>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;operation.js&#34;</span> <span class="kr">async</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p>Above code tells the browser to continue downloading the HTML content once the script tag element has
+                been reached. Async scripts will download the script without blocking rendering the page and will
+                execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any
+                specific order, only that they will not stop the rest of the page from displaying. It is best to use
+                async when the scripts in the page run independently from each other and depend on no other script on
+                the page.</p>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="kr">async</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/vendor/jquery.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="kr">async</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/vendor/jquery.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
 <span class="o">&lt;</span><span class="nx">script</span> <span class="kr">async</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/script2.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
 <span class="o">&lt;</span><span class="nx">script</span> <span class="kr">async</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/script3.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>If script2.js depends jquery.js to work then this code may not run properly because loading script2.js may finish before loading jquery.js. Defer will run the scripts in the order they appear in the page and execute them as soon as the script and content are downloaded:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p>If script2.js depends jquery.js to work then this code may not run properly because loading script2.js
+                may finish before loading jquery.js. Defer will run the scripts in the order they appear in the page and
+                execute them as soon as the script and content are downloaded:</p>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">defer</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/vendor/jquery.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">defer</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/vendor/jquery.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">defer</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/script2.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">defer</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;js/script3.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>All the scripts with the defer attribute will load in the order they appear on the page. So in the above example, we can be sure that jquery.js will load before script2.js and script3.js and that script2.js will load before script3.js.</p>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p>All the scripts with the defer attribute will load in the order they appear on the page. So in the
+                above example, we can be sure that jquery.js will load before script2.js and script3.js and that
+                script2.js will load before script3.js.</p>
 
-<h2 id="comments">Comments</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+              <h2 id="comments">Comments</h2>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -229,9 +275,10 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// querySelector function finds first p element
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// querySelector function finds first p element
 </span><span class="c1"></span><span class="k">const</span> <span class="nx">para</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
 
 <span class="cm">/*
@@ -239,37 +286,50 @@
 </span><span class="cm">2. Validate data
 </span><span class="cm">*/</span>
 <span class="p">...</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="constants">Constants</h2>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h2 id="constants">Constants</h2>
 
-<p>Setting constans second time cannot be permit.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+              <p>Setting constans second time cannot be permit.</p>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
 
 <span class="k">const</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> 
 
  <span class="nx">num</span><span class="o">=</span><span class="mi">7</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p><img src="/images/settingConstantError.png" alt="Screenshot" /></p>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p><img src="/images/javascript/settingConstantError.png" alt="Screenshot" /></p>
 
-<h2 id="string-operations">String Operations</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+              <h2 id="string-operations">String Operations</h2>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -284,9 +344,10 @@
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//Slice, replace and indexOf methods
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//Slice, replace and indexOf methods
 </span><span class="c1"></span><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
 
  <span class="kd">let</span> <span class="nx">browserName</span> <span class="o">=</span> <span class="s2">&#34;Mozilla&#34;</span><span class="p">;</span>
@@ -301,13 +362,19 @@
 </span><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">browserName</span><span class="p">);</span><span class="c1">//Mozilla
 </span><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">browserName</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&#34;oz&#34;</span><span class="p">));</span><span class="c1">//1
 </span><span class="c1"></span><span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="arrays">Arrays</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h2 id="arrays">Arrays</h2>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -321,9 +388,10 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">  <span class="kd">let</span> <span class="nx">cities</span> <span class="o">=</span> <span class="p">[</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js">  <span class="kd">let</span> <span class="nx">cities</span> <span class="o">=</span> <span class="p">[</span>
       <span class="s2">&#34;London&#34;</span><span class="p">,</span>
       <span class="s2">&#34;Manchester&#34;</span><span class="p">,</span>
       <span class="s2">&#34;Birmingham&#34;</span><span class="p">,</span>
@@ -337,33 +405,46 @@
 </span><span class="c1"></span>
 <span class="kd">let</span> <span class="nx">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">];</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sequence</span><span class="p">);</span><span class="c1">// (6) [1, 2, 3, 5, 8, 13]
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="string-split-function">String split function</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h3 id="string-split-function">String split function</h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">  <span class="kd">let</span> <span class="nx">myData</span> <span class="o">=</span> <span class="s1">&#39;Manchester,London,Liverpool,Birmingham,Leeds,Carlisle&#39;</span><span class="p">;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js">  <span class="kd">let</span> <span class="nx">myData</span> <span class="o">=</span> <span class="s1">&#39;Manchester,London,Liverpool,Birmingham,Leeds,Carlisle&#39;</span><span class="p">;</span>
   <span class="kd">let</span> <span class="nx">splittedCities</span> <span class="o">=</span> <span class="nx">myData</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">);</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">splittedCities</span><span class="p">);</span>
 
   <span class="kd">let</span> <span class="nx">myNewString</span> <span class="o">=</span> <span class="nx">splittedCities</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">);</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myNewString</span><span class="p">);</span><span class="c1">// same as myData string
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="push-method">Push method</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h3 id="push-method">Push method</h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -372,9 +453,10 @@
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"> <span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;orange&#34;</span><span class="p">];</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"> <span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;orange&#34;</span><span class="p">];</span>
     <span class="nx">fruits</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;banana&#34;</span><span class="p">);</span>
     <span class="nx">fruits</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;watermelon&#34;</span><span class="p">,</span> <span class="s2">&#34;mango&#34;</span><span class="p">);</span>
     <span class="cm">/*
@@ -383,37 +465,51 @@
 </span><span class="cm">      fruits.push(...additionalFruits);
 </span><span class="cm">    */</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span><span class="c1">// (5) [&#34;apple&#34;, &#34;orange&#34;, &#34;banana&#34;, &#34;watermelon&#34;, &#34;mango&#34;]
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="pop-method">Pop method</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h3 id="pop-method">Pop method</h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">  <span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;orange&#34;</span><span class="p">];</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js">  <span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;orange&#34;</span><span class="p">];</span>
   <span class="nx">fruits</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;banana&#34;</span><span class="p">);</span>
 
   <span class="kd">let</span> <span class="nx">lastElement</span> <span class="o">=</span> <span class="nx">fruits</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
   
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">lastElement</span><span class="p">);</span><span class="c1">// banana
 </span><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span><span class="c1">// (2) [&#34;apple&#34;, &#34;orange&#34;]
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<p>unshift() and shift() work in exactly the same way as push() and pop(), respectively, except that they work on the beginning of the array, not the end.</p>
+</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p>unshift() and shift() work in exactly the same way as push() and pop(), respectively, except that they
+                work on the beginning of the array, not the end.</p>
 
-<h3 id="unshift-and-shift-methods">Unshift and shift methods</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
+              <h3 id="unshift-and-shift-methods">Unshift and shift methods</h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -422,9 +518,10 @@
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;orange&#34;</span><span class="p">];</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js">    <span class="kd">let</span> <span class="nx">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;apple&#34;</span><span class="p">,</span> <span class="s2">&#34;orange&#34;</span><span class="p">];</span>
     <span class="nx">fruits</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&#34;banana&#34;</span><span class="p">);</span>
 
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span><span class="c1">// (3) [&#34;banana&#34;,&#34;apple&#34;, &#34;orange&#34;]
@@ -433,13 +530,19 @@
     
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstElement</span><span class="p">);</span><span class="c1">// banana
 </span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">);</span><span class="c1">// (2) [&#34;apple&#34;, &#34;orange&#34;]
-</span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="an-array-example">An array example</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h3 id="an-array-example">An array example</h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -458,9 +561,10 @@
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -478,11 +582,18 @@
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./first.js&#34;</span> <span class="na">async</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -523,9 +634,10 @@
 </span><span class="lnt">39
 </span><span class="lnt">40
 </span><span class="lnt">41
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// first.js file
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">// first.js file
 </span><span class="c1"></span>
 <span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
@@ -566,13 +678,19 @@
     <span class="p">});</span>
 
     <span class="nx">id</span><span class="p">(</span><span class="s2">&#34;total&#34;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;Total : $&#34;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="switch-case">Switch-Case</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h2 id="switch-case">Switch-Case</h2>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -597,9 +715,10 @@
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -623,11 +742,18 @@
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./scripts/block.js&#34;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -669,9 +795,10 @@
 </span><span class="lnt">40
 </span><span class="lnt">41
 </span><span class="lnt">42
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//block.js
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//block.js
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
 <span class="p">}</span>
@@ -713,15 +840,22 @@
     <span class="p">}</span>
 
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="events">Events</h2>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <h2 id="events">Events</h2>
 
-<h3 id="addeventlistener-and-removeeventlistener-methods">AddEventListener and RemoveEventListener methods</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+              <h3 id="addeventlistener-and-removeeventlistener-methods">AddEventListener and RemoveEventListener methods
+              </h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -740,9 +874,10 @@
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -760,11 +895,18 @@
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./scripts/index.js&#34;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -792,9 +934,10 @@
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//index.js
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//index.js
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>    
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
 <span class="p">}</span>
@@ -822,15 +965,21 @@
         <span class="nx">btnShow</span><span class="p">.</span><span class="nx">removeEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">log1</span><span class="p">);</span>
     <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>After clicking btnRemove, btnShow click event only executes log2 function.</p>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p>After clicking btnRemove, btnShow click event only executes log2 function.</p>
 
-<h3 id="using-event-object">Using Event Object</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+              <h3 id="using-event-object">Using Event Object</h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -848,9 +997,10 @@
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -867,11 +1017,18 @@
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./scripts/index.js&#34;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -898,9 +1055,10 @@
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//index.js
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//index.js
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
 <span class="p">}</span>
@@ -927,15 +1085,22 @@
 
     <span class="nx">btnShow</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="nx">bgChange</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-<p>event.target object in bgChange method refers btnShow button element. We can observe the content of event in browser console tab.</p>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <p>event.target object in bgChange method refers btnShow button element. We can observe the content of
+                event in browser console tab.</p>
 
-<h3 id="basic-form-submit">Basic Form Submit</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
+              <h3 id="basic-form-submit">Basic Form Submit</h3>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -967,9 +1132,10 @@
 </span><span class="lnt">30
 </span><span class="lnt">31
 </span><span class="lnt">32
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -1000,11 +1166,18 @@
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./scripts/index.js&#34;</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="highlight">
+                <div class="chroma">
+                  <table class="lntable">
+                    <tr>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1032,9 +1205,10 @@
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//index.js
+</span></code></pre>
+                      </td>
+                      <td class="lntd">
+                        <pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//index.js
 </span><span class="c1"></span><span class="kd">function</span> <span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span>
 <span class="p">}</span>
@@ -1062,89 +1236,96 @@
         <span class="p">}</span>
     <span class="p">});</span>
 <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>
-    </div>
+</code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
 
-    
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/mdn/">mdn</a>
-          <a href="/tags/javascript/">javascript</a>
-          <a href="/tags/es6/">es6</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/post/javascript-notes-oop/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">MDN JavaScript Notes Episode 2: Object Oriented JS</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/exception-handling/">
-            <span class="next-text nav-default">Exception Handling in Asp.Net Core</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
+
+            <footer class="post-footer">
+              <div class="post-tags">
+                <a href="/tags/mdn/">mdn</a>
+                <a href="/tags/javascript/">javascript</a>
+                <a href="/tags/es6/">es6</a>
+              </div>
+              <nav class="post-nav">
+                <a class="prev" href="/post/javascript-notes-oop/">
+                  <i class="iconfont icon-left"></i>
+                  <span class="prev-text nav-default">MDN JavaScript Notes Episode 2: Object Oriented JS</span>
+                  <span class="prev-text nav-mobile">Prev</span>
+                </a>
+                <a class="next" href="/post/exception-handling/">
+                  <span class="next-text nav-default">Exception Handling in Asp.Net Core</span>
+                  <span class="next-text nav-mobile">Next</span>
+                  <i class="iconfont icon-right"></i>
+                </a>
+              </nav>
+            </footer>
+          </article>
         </div>
         <div id="disqus_thread"></div>
-<script type="text/javascript">
-  (function () {
-    
-    
-    if (window.location.hostname === 'localhost') return;
+        <script type="text/javascript">
+          (function () {
 
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'disqus_7Wvz7hiBkH';
-    dsq.src = 'https://https-fatihapaydin-github-io.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-    Disqus.</a></noscript>
+
+            if (window.location.hostname === 'localhost') return;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            var disqus_shortname = 'disqus_7Wvz7hiBkH';
+            dsq.src = 'https://https-fatihapaydin-github-io.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="https://github.com/fatihapaydin" class="iconfont icon-github" title="github"></a>
-  <a href="https://fatihapaydin.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
-</div>
+        <a href="https://github.com/fatihapaydin" class="iconfont icon-github" title="github"></a>
+        <a href="https://fatihapaydin.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss"
+          title="rss"></a>
+      </div>
 
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
+      <div class="copyright">
+        <span class="power-by">
+          Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+        </span>
+        <span class="division">|</span>
+        <span class="theme-info">
+          Theme -
+          <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+        </span>
 
-  
 
-  <span class="copyright-year">
-    &copy; 
-    2019
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">Fatih APAYDIN</span>
-  </span>
-</div>
+
+        <span class="copyright-year">
+          &copy;
+          2019
+          <span class="heart">
+            <i class="iconfont icon-heart"></i>
+          </span>
+          <span class="author">Fatih APAYDIN</span>
+        </span>
+      </div>
     </footer>
 
     <div class="back-to-top" id="back-to-top">
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js"
+    integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js"
+    integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
 
 
 
