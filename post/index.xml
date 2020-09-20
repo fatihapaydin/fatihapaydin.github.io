@@ -1,15 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Even - A super concise theme for Hugo</title>
+    <title>Posts on Enjoy Programming</title>
     <link>https://fatihapaydin.github.io/post/</link>
-    <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
+    <description>Recent content in Posts on Enjoy Programming</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Apr 2019 22:43:54 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 05 May 2019 00:15:41 +0300</lastBuildDate><atom:link href="https://fatihapaydin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MDN JavaScript Notes Episode 2: Object Oriented JS</title>
+      <link>https://fatihapaydin.github.io/post/javascript-notes-oop/</link>
+      <pubDate>Sun, 05 May 2019 00:15:41 +0300</pubDate>
+      
+      <guid>https://fatihapaydin.github.io/post/javascript-notes-oop/</guid>
+      <description>Define an Object Let&amp;rsquo;s define an object.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  function log(num) { console.log(num); } function id(idValue) { return document.getElementById(idValue); } window.onload = function () { let person = { name: { first: &amp;#34;Bob&amp;#34;, last: &amp;#34;Smith&amp;#34; }, age: 32, gender: &amp;#34;male&amp;#34;, interests: [&amp;#34;music&amp;#34;, &amp;#34;skiing&amp;#34;], bio: function () { log(this.</description>
+    </item>
     
-	<atom:link href="https://fatihapaydin.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>MDN JavaScript Notes Episode 1: Basics</title>
+      <link>https://fatihapaydin.github.io/post/javascript-notes/</link>
+      <pubDate>Wed, 01 May 2019 03:30:11 +0300</pubDate>
+      
+      <guid>https://fatihapaydin.github.io/post/javascript-notes/</guid>
+      <description>Async and Defer keyword We can call external javascript by
+1  &amp;lt;script src=&amp;#34;operation.js&amp;#34; async&amp;gt;&amp;lt;/script&amp;gt;   Above code tells the browser to continue downloading the HTML content once the script tag element has been reached. Async scripts will download the script without blocking rendering the page and will execute it as soon as the script finishes downloading. You get no guarantee that scripts will run in any specific order, only that they will not stop the rest of the page from displaying.</description>
+    </item>
     
     <item>
       <title>Exception Handling in Asp.Net Core</title>
@@ -38,7 +54,7 @@
       
       <guid>https://fatihapaydin.github.io/post/asp-net-core-configuration/</guid>
       <description>Configuration Let&amp;rsquo;s define appsettings.Development.json file in our mvc app root directory as
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  {&amp;#34;Logging&amp;#34;: {&amp;#34;LogLevel&amp;#34;: { &amp;#34;Default&amp;#34;: &amp;#34;Debug&amp;#34;,&amp;#34;System&amp;#34;: &amp;#34;Information&amp;#34;,&amp;#34;Microsoft&amp;#34;: &amp;#34;Information&amp;#34;}},&amp;#34;custom&amp;#34;: {&amp;#34;Name&amp;#34;: &amp;#34;Ali&amp;#34;,&amp;#34;Surname&amp;#34;: &amp;#34;Elmas&amp;#34;,&amp;#34;Number&amp;#34;: 123}}   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  { &amp;#34;Logging&amp;#34;: { &amp;#34;LogLevel&amp;#34;: {  &amp;#34;Default&amp;#34;: &amp;#34;Debug&amp;#34;, &amp;#34;System&amp;#34;: &amp;#34;Information&amp;#34;, &amp;#34;Microsoft&amp;#34;: &amp;#34;Information&amp;#34; } }, &amp;#34;custom&amp;#34;: { &amp;#34;Name&amp;#34;: &amp;#34;Ali&amp;#34;, &amp;#34;Surname&amp;#34;: &amp;#34;Elmas&amp;#34;, &amp;#34;Number&amp;#34;: 123 } }   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  public class HomeController : Controller { private readonly IConfiguration _config; public HomeController(IConfiguration config) { _config = config; } public string Index() { var name = _config.</description>
     </item>
     
     <item>
@@ -47,7 +63,7 @@
       <pubDate>Fri, 05 Apr 2019 01:57:01 +0300</pubDate>
       
       <guid>https://fatihapaydin.github.io/post/importantcommandslist/</guid>
-      <description>Net Core 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  #Adding project to solution dotnet sln add App/App.csproj #Removing a project from solution dotnet sln remove App/App.csproj #Create .net core classlib dotnet new classlib -o Domain -f netcoreapp2.2 #Adding migrations dotnet ef migrations add Student_Table_Added #Apply migrations to database dotnet ef database update #Deleting database dotnet ef database drop   GitHub 1 2 3 4 5 6 7 8 9 10 11 12 13  #Initial settings for git integration git config --global user.</description>
+      <description>Dot Net Core 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  #Adding project to solution dotnet sln add App/App.csproj #Removing a project from solution dotnet sln remove App/App.csproj #Create .net core classlib dotnet new classlib -o Domain -f netcoreapp2.2 #Adding migrations dotnet ef migrations add Student_Table_Added #Apply migrations to database dotnet ef database update #Deleting database dotnet ef database drop   GitHub 1 2 3 4 5 6 7 8 9 10 11 12 13  #Initial settings for git integration git config --global user.</description>
     </item>
     
   </channel>
